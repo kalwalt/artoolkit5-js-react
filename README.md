@@ -1,3 +1,17 @@
+# artoolkit5-js-react
+
+A simple project to test [artoolkit5-js](https://github.com/andypotato/artoolkit5-js) with react
+
+## Instructions
+
+Install the dependencies:
+
+`yarn install`
+
+then run:
+
+`yarn start`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
