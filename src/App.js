@@ -17,10 +17,10 @@ loadImage('data/img.jpg').then((image) => {
      return arController.loadMarker('./data/hiro.patt').then((markerId) => {
        console.log('Marker loaded with id: ', markerId)
        const track = arController.trackPatternMarkerId(markerId)
-       console.log('Pattern tracked: ', track);
+       console.log('Pattern tracked: ', track)
        arController.process(image)
        arController.addEventListener('getMarker', (ev) => {
-       console.log(ev);
+       console.log(ev.data.marker)
        })
      })
   })
