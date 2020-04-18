@@ -16,10 +16,13 @@ loadImage('data/img.jpg').then((image) => {
   ARController.initWithImage(image, './data/camera_para.dat', options).then( (arController) => {
      return arController.loadMarker('./data/hiro.patt').then((markerId) => {
        console.log('Marker loaded with id: ', markerId)
+       const track = arController.trackPatternMarkerId(markerId)
+       console.log('Pattern tracked: ', track);
+       arController.process(image)
+       arController.addEventListener('getMarker', (ev) => {
+       console.log(ev);
+       })
      })
-  })
-  .then((arController) => {
-    arController.process(image)
   })
   .catch(err => {
     console.log('Something went wrong', err)
